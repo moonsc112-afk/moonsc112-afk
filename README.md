@@ -1,16 +1,31 @@
-## Hi there 👋
+### moonsc112-afk
 
-<!--
-**moonsc112-afk/moonsc112-afk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Security researcher — smart contracts & web/API authorization surfaces.
 
-Here are some ideas to get you started:
+I hunt bugs the report-driven way: read the program's rubric and scope first, map
+the intended security model, then test whether every route, tool, and token type
+enforces the same checks — and prove it with a working PoC.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**Focus**
+- Smart contracts: EVM (Solidity/Vyper) & Solana (Anchor) — authorization,
+  accounting & rounding, oracle manipulation, reentrancy, privilege escalation,
+  loss-of-funds paths.
+- Web / API / OAuth / MCP: org & tenant scoping, token-type confusion, IDOR,
+  allowlist bypass, confirmation-gate TOCTOU, SSRF, query scoping.
+
+**Method**
+- PoC-first, not scanner output.
+- Impact quantified against the program's own severity rubric.
+- Rule-compliant: test only what I own, low volume, stop at proof, minimal
+  redacted evidence, coordinated disclosure.
+
+**Tooling**
+- EVM: Foundry · slither · echidna · medusa · solc-select
+- Solana: Anchor / Agave · on-chain PoC against deployed bytecode
+- Web/OAuth/MCP: curl + browser harnesses · custom JSON-RPC / PKCE clients
+- AI-agent-assisted recon & evidence; account-side actions kept manual
+
+**Activity**
+- Bug bounty on HackenProof.
+
+> Pinning reproducible PoCs and disclosed writeups here as they go public.
